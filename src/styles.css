@@ -121,7 +121,27 @@
 .search-bar button:hover {
     background-color: #45a049;
 }
+/* Style for arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
 /* Footer Styles */
 .footer {
     background-color: #d1a8a8;
@@ -129,31 +149,38 @@
     padding: 10px 20px;
     text-align: center;
 }
-/* Category Styles */
-.category-container {
-    display: flex;
-    flex-wrap: nowrap; /* Display categories in a single row without wrapping */
-    justify-content: space-between; /* Adjust spacing between categories */
-    margin-top: 20px;
+/* Category View Styles */
+.category-view {
+    overflow-x: auto; /* Enable horizontal scrolling */
 }
 
-
+.category-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical overflow */
+    margin-top: 20px;
+    padding-bottom: 20px;
+    max-width: 800px; /* Set maximum width to fit within a fixed-size container */
+}
 
 .category {
-    width: 150px; /* Adjust width as needed */
+    flex: 0 0 auto;
+    width: 150px; /* Set the width of each category */
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-right: 20px; /* Add margin between categories */
+    margin-right: 20px;
+}
+
+.category:last-child {
+    margin-right: 0; /* Remove right margin from the last category */
 }
 
 .category img {
     width: 100%;
     height: auto;
-    border-radius: 5px 5px 0 0; /* To match the border radius of the category container */
-    margin-bottom: 10px; /* Adjust as needed */
-}
-.category:nth-child(odd) {
-    margin-right: 20px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 10px;
 }
