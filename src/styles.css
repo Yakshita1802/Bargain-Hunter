@@ -34,52 +34,33 @@
     text-decoration: underline;
 }
 
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
 
-.logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
 
 /* Main Content Styles */
 .main-content {
     padding: 20px;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column; /* Adjust to column layout */
+    align-items: center; /* Center align content */
 }
 
-.checkbox {
-    margin-bottom: 20px;
+.search-bar {
+    display: flex;
+    margin-bottom: 20px; /* Add space between search bar and image */
 }
 
-.checkbox input[type="checkbox"] {
-    margin-right: 10px;
+.search-bar input[type="text"],
+.search-bar button {
+    /* Add your styles for the search bar inputs and buttons */
 }
 
-.register-btn, .login-btn {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-right: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.registration-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Add space between registration form and image */
 }
 
-.register-btn:hover, .login-btn:hover {
-    background-color: #45a049;
-}
 
 /* Plan Info Styles */
 .plan-info {
@@ -147,4 +128,32 @@
     color: #fff;
     padding: 10px 20px;
     text-align: center;
+}
+/* Category Styles */
+.category-container {
+    display: flex;
+    flex-wrap: nowrap; /* Display categories in a single row without wrapping */
+    justify-content: space-between; /* Adjust spacing between categories */
+    margin-top: 20px;
+}
+
+
+
+.category {
+    width: 150px; /* Adjust width as needed */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Add margin between categories */
+}
+
+.category img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0; /* To match the border radius of the category container */
+    margin-bottom: 10px; /* Adjust as needed */
+}
+.category:nth-child(odd) {
+    margin-right: 20px;
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../registrationForm.css';
+
 const RegistrationForm = ({ onClose }) => {
     const [formData, setFormData] = useState({
         firstName: '',

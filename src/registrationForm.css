@@ -1,12 +1,16 @@
 /* registrationForm.css */
 
 .registration-form {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
     max-width: 400px;
-    margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
+    z-index: 1; /* Ensure the form is above the image */
 }
 
 .registration-form h2 {
@@ -38,4 +42,17 @@
 
 .registration-form button:hover {
     background-color: #45a049;
+}
+.registration-form-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 1;
+    display: none; /* Initially hide the form wrapper */
+}
+
+.registration-form-wrapper.open {
+    display: block; /* Display the form wrapper when registration form is open */
 }
