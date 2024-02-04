@@ -1,0 +1,41 @@
+/* listHome.css */
+
+.list-home {
+    max-width: 600px; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+  }
+  
+  .list-home form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .list-home form label {
+    margin-bottom: 8px;
+  }
+  
+  .list-home form input[type="text"],
+  .list-home form input[type="number"],
+  .list-home form textarea,
+  .list-home form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .list-home form button[type="submit"] {
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .list-home form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
