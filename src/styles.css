@@ -1,16 +1,60 @@
-/* Header Styles */
+/* styles.css */
+
 .header {
-    background-color: #d1a8a8;
+    background-color: #ffffff;
     color: #fff;
-    padding: 5px;
-    text-align: center;
+    padding: 3px; /* Adjust as needed */
+}
+
+.centered-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.nav {
-    margin-top: 10px;
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.application-dropdown {
+    position: relative;
+    margin-right: 20px; /* Add margin for spacing */
+}
+
+.application-dropdown-button {
+    background-color: transparent;
+    border: none;
+    color: #041b34; /* Change the color of the text */
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #70a6cd;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ccdde6;
+}
+
+.application-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.right-section {
+    display: flex;
+    align-items: center; /* Align items vertically */
 }
 
 .nav ul {
@@ -21,17 +65,24 @@
 
 .nav ul li {
     display: inline-block;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
-.nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+.nav ul li button {
+    background-color: transparent;
+    border: none;
+    color: #041b34; /* Change the color of the text */
+    cursor: pointer;
 }
 
-.nav ul li a:hover {
+.nav ul li button:hover {
     text-decoration: underline;
+}
+
+.logo {
+    width: 100px; /* Adjust the width of the logo as desired */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the logo horizontally */
 }
 
 
@@ -144,7 +195,7 @@
 }
 /* Footer Styles */
 .footer {
-    background-color: #d1a8a8;
+    background-color: #71aad6;
     color: #fff;
     padding: 10px 20px;
     text-align: center;

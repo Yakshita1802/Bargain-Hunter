@@ -4,7 +4,8 @@ import Header from './components/Header';
 import MainContent from './components/MainContent';
 import Footer from './components/Footer';
 import SellPage from './components/SellPage';
-import ListHome from './components/ListHome'; // Import the ListHome component
+import ListHome from './components/ListHome';
+import ProductList from './components/ProductList'; // Import the ProductList component
 import './styles.css';
 
 const App = () => {
@@ -14,7 +15,8 @@ const App = () => {
                 <Header />
                 <Routes>
                     <Route path="/sell" element={<SellPage />} />
-                    <Route path="/list-home" element={<ListHome />} /> {/* Define the List Home route */}
+                    <Route path="/list-home" element={<ListHome />} />
+                    <Route path="/products" element={<ProductList />} /> {/* Define the route for ProductList */}
                     <Route path="/" element={<MainContent />} />
                 </Routes>
                 <Footer />
