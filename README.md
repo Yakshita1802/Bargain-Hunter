@@ -19,7 +19,11 @@ Make sure you have the following software installed on your system:
 
 1. Clone the repository to your local machine:
 
+<<<<<<< HEAD
     ```
+=======
+   ```
+>>>>>>> origin/homepage
    git clone https://github.com/your-username/bargainhunter-frontend.git
    ```
 
@@ -41,4 +45,8 @@ To start the development server, run:
 
 ```
 npm start
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> origin/homepage
