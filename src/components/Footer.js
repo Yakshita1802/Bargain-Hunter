@@ -19,7 +19,7 @@ const Footer = () => {
                     <li><button onClick={() => {}}>Help Desk</button></li>
                     <li><button onClick={() => {}}>Accessibility</button></li>
                 </ul>
-            </div> <p>&copy; 2024 BargainHunter</p>
+            </div> <p>&copy; 2024 Bargain Hunter</p>
         </footer>
     );
 };

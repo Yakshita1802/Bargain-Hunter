@@ -24,11 +24,8 @@ const MainContent = () => {
                 </div>
             ) : (
                 <>
-                    <div className="search-bar">
-                        <input type="text" placeholder="Search by City, Town, State, or Zip Code" />
-                        <button>Search</button>
-                    </div>
-                    <img src={mainContentImage} alt="Main Content" style={{ width: '100%' }} /> {/* Display the main content image */}
+                    
+                    <img src={mainContentImage} alt="Main Content" style={{ height: '50%', width: '100%' }} /> {/* Display the main content image */}
 
                     {/* Category sections */}
                     <div className="category-container">

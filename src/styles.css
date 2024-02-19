@@ -85,7 +85,23 @@
 .post-ad-button:hover {
     text-decoration: underline; /* Add underline on hover */
 }
+.saved-button {
+    display: flex;
+    align-items: center;
+}
 
+.saved-button-icon {
+    background-color: transparent;
+    border: none;
+    color: #041b34; /* Change the color of the text */
+    cursor: pointer;
+    display: flex; /* Align icon and text in the same line */
+    align-items: center; /* Vertically center items */
+}
+
+.saved-button-icon:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
 .right-section {
     display: flex;
     align-items: center; /* Align items vertically */
@@ -143,26 +159,24 @@
 .main-content {
     padding: 5px;
     display: flex;
-    flex-direction: column; /* Adjust to column layout */
-    align-items: center; /* Center align content */
+    flex-direction: column;
+    align-items: center;
 }
 
-.search-bar {
-    display: flex;
-    margin-bottom: 20px; /* Add space between search bar and image */
-}
-
-.search-bar input[type="text"],
-.search-bar button {
-    /* Add your styles for the search bar inputs and buttons */
+.main-content-image {
+    height: 50%; /* Adjust the height value as needed */
+    width: 100%;
 }
 
 .registration-form-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px; /* Add space between registration form and image */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    margin-bottom: 20px;
 }
+
 
 
 /* Plan Info Styles */
@@ -222,45 +236,7 @@
     background-color: #f0f0f0; /* Change background color on hover */
 }
 
-/* Search Bar Styles */
-.search-bar {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    width: 80%;
-    max-width: 500px;
-}
 
-.search-bar input[type="text"] {
-    flex: 1;
-    padding: 15px;
-    font-size: 18px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-right: 10px;
-}
-
-.search-bar button {
-    background-color: #4279ad;
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.search-bar button:hover {
-    background-color: #45a049;
-}
 /* Style for arrows */
 .arrow {
     position: absolute;

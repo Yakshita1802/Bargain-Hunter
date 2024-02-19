@@ -1,0 +1,30 @@
+/* PostAd.css */
+.post-ad-container {
+    padding: 20px;
+}
+
+.post-ad-container h2 {
+    margin-bottom: 10px;
+}
+
+.post-ad-container input,
+.post-ad-container textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.post-ad-container button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.post-ad-container button:hover {
+    background-color: #0056b3;
+}
