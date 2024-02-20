@@ -23,4 +23,21 @@ pipeline {
             }
         }
     }
+    
+    post {
+        success {
+            emailext (
+                to: ryb1802@gmail.com,
+                subject: 'Jenkins Pipeline Notification: Build Successful',
+                body: 'The Jenkins pipeline has been successfully executed.'
+            )
+        }
+        failure {
+            emailext (
+                to: ryb1802@gmail.com,
+                subject: 'Jenkins Pipeline Notification: Build Failed',
+                body: 'The Jenkins pipeline has failed. Please check the build logs for details.'
+            )
+        }
+    }
 }
