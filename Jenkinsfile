@@ -1,11 +1,23 @@
 pipeline {
     agent any
     
+    environment {
+        PATH = "/opt/homebrew/bin:$PATH"
+    }
+    
     stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'HomePage_V0', url: 'https://github.com/Hsadikot95S/Bargain-Hunter.git'
+            }
+        }
+        
         stage('Build') {
             steps {
                 echo 'Building the project...'
-                // Add your build commands here
+                sh '/opt/homebrew/bin/brew install node' // Use the full path to Homebrew
+                sh 'npm install' // Install project dependencies
+                sh 'npm run build' // Build the React project
             }
         }
         
@@ -27,14 +39,14 @@ pipeline {
     post {
         success {
             emailext (
-                to: ryb1802@gmail.com,
+                to: 'ryb1802@gmail.com',
                 subject: 'Jenkins Pipeline Notification: Build Successful',
                 body: 'The Jenkins pipeline has been successfully executed.'
             )
         }
         failure {
             emailext (
-                to: ryb1802@gmail.com,
+                to: 'ryb1802@gmail.com',
                 subject: 'Jenkins Pipeline Notification: Build Failed',
                 body: 'The Jenkins pipeline has failed. Please check the build logs for details.'
             )
